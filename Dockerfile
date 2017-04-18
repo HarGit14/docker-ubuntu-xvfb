@@ -3,7 +3,7 @@
 # Version 0.1
 FROM ubuntu:16.04
 # Install vnc, xvfb, firefox
-RUN apt-get update && apt-get install -y x11vnc xvfb ratpoison xterm firefox software-properties-common
+RUN apt-get update && apt-get install -y x11vnc xvfb ratpoison xterm firefox software-properties-common locales
 RUN apt-get --reinstall install xfonts-base
 
 # install Digikam5
