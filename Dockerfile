@@ -5,7 +5,11 @@ FROM ubuntu:16.04
 # Install vnc, xvfb, firefox
 RUN apt-get update && apt-get install -y x11vnc xvfb ratpoison xterm firefox software-properties-common locales
 RUN apt-get --reinstall install xfonts-base
+
+# set language
 RUN locale-gen de_DE.UTF-8
+RUN update-locale LANG=de_DE.UTF-8
+ENV LANG=de_DE.UTF-8
 
 # install Digikam5
 RUN add-apt-repository ppa:philip5/extra
