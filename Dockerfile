@@ -21,7 +21,7 @@ RUN mkdir ~/.vnc
 RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 
 # start virtual framebuffer and ratpoison
-RUN Xvfb -screen 0 800x600x16 -ac &
+RUN Xvfb -screen 0 1280x1024x16 -ac &
 RUN DISPLAY=:0 ratpoison &
 
 # Autostart firefox
